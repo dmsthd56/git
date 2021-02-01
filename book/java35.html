@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-compatible" content="IE=Edge,chrome=1">
+ <title>step page 제작</title>
+ <script>
+//10/29
+     function aaa(){
+        //정보보안 암호화 체크
+         var sch = f.agree.checked;
+    //똑같은 체크박스가 두개 있을때 var sch = f.agree[0].checked; 으로 노드 확인
+         //alert(sch);
+
+        //사업자 번호 체크 
+        var fnum = f.snumber1.value; //사업자 번호 앞자리 값 (먼저 number로 가져오지 않음)
+        var lnum = f.snumber2.value; //사업자 번호 뒷자리 값
+        //대표자 명
+        var cnm = f.sname.value;
+
+        if(sch==false){ //사업자 번호랑 따로 놀아야함 
+            alert("정보보안 암호화를 체크해주세요");
+        }
+       
+        if(fnum=="" ||lnum=="" ){//아무것도 입력 안했을경우
+                alert("정확한 사업자 번호를 입력해주세요");
+        }
+        /*else if(fnum=="string" ||lnum=="string" ){//문자인지 숫자인지 확인
+                alert("문자는 입력하실 수 없습니다.");
+        }*/
+        else { 
+              if(fnum.length<6||lnum.length<7){
+                alert("사업자 번호를 6자리 7자리를 입력해주세요");
+            }
+
+              else{ 
+                 if(cnm==""){
+                  alert("등록된 대표자 명이 아닙니다.");
+                }
+            
+                else { //최종 값 넘기기 
+                  f.method="GET";
+                  f.action="http://musichour.dothome.co.kr/book/java36.html";
+                  f.submit();
+                }
+            }
+        } 
+        
+        
+     }//aaa end
+
+ </script>
+</head>
+<body>
+<form name="f"> <!-- 보내야 함으로 form을 생성-->
+<!--<form name="f" id="f" action="java36.html" method="get"> //선생님 방법-->
+ <input type="checkbox" name="agree">정보보안 암호화
+ <input type="text" name="snumber1" maxlength="6" placeholder="사업자번호 앞자리" >-
+ <input type="text" name="snumber2" maxlength="7" placeholder="사업자번호 뒷자리" >
+ <input type="text" name="sname" placeholder="대표자명">
+ <input type="button" value="패스워드 찾기" onclick="aaa();">
+</form>
+</body>
+
+</html>

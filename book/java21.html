@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-compatible" content="IE=Edge,chrome=1">
+ <title>javascript - 84p 부가사항15-1 (10/28)</title>
+ <script>
+     var a = ["홍길동", "이순신", "강감창", "유관순", "유리왕", "김구"];
+     var b = a.length;
+     var c;
+     
+     for(c=0;c<b;c++){
+         var d = c%2;
+         //alert(d)
+         if(d==0 && c>0){//+ c!=0 노드 0인 홍길동을 출력 안시키고 싶을때
+         document.write(a[c]+"<br>");
+         }
+     }
+
+ </script>
+</head>
+<body>
+
+</body>
+</html>

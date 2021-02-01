@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-compatible" content="IE=Edge,chrome=1">
+ <title>javascript - 85p 부가사항19 (10/28)</title>
+ <script>
+   // 다시 해보기!
+
+  /*  var a;
+    var b="<table border='1'>";
+    for(a=1;a<4;a++){
+        b += "<tr>" + a + "</tr>";
+       
+    };
+    b += "</table>"
+    console.log(b);
+    document.write(b);
+    //이런식으로 찍으면 안나옴 옛날 방식!*/
+
+    var a;
+    var b="<table border='1'>";
+    var c;
+    for(a=10;a>2;a--){
+     b = b + "<tr><td>" + a + "</td></tr>"; 
+     //tr은 td가 생성이 되면 마크업이 되어 자동 생성됨
+    };   
+    b = b + "</table>";
+    document.write(b);
+
+
+ </script>
+</head>
+<body>
+
+</body>
+</html>

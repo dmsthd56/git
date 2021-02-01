@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+ <title>jquery3(11/2)</title>
+ <script src="../jquery/jquery.js"></script><!--jquery 엔진 셋팅-->
+ <script>
+     $(document).ready(function(){
+    /* 클릭시 점점 사라지게 함 */
+       $("#box").click(function(){
+          $("#box").fadeOut();
+          // $(this).fadeOut();
+       });
+   
+    /* 클릭시 위로 올라감 */
+       $("#box2").click(function(){
+           $(this).slideUp();
+ 
+       });
+ 
+    /* 클릭시 width 500 늘어나야 함 */
+       $("#box3").click(function(){ 
+           $("#box3").animate({ //animate 사용
+               "width" : "500px"
+
+           },1000)
+
+
+       });
+     });//ready end
+ </script>
+ <style>
+    body {margin:0; padding:0;}
+/*root를 이용하여 제작 : 100*100 background-color = blue */
+    :root{
+        --box-w:100px;
+        --box-h:100px;
+        --box-color:blue; 
+        --box-click : pointer;
+    }
+
+    .box {width:var(--box-w); height:var(--box-h);
+    background-color:var(--box-color); cursor:var(--box-click); margin-top:5px;}
+ </style>
+</head>
+<body>
+ <div class="box" id="box"></div>
+ <div class="box" id="box2"></div>
+ <div class="box" id="box3"></div>
+
+</body>
+</html>

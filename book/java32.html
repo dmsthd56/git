@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-compatible" content="IE=Edge,chrome=1">
+ <title>javascript 131~157p 함수 (10/29)</title>
+ <script>
+    function abc(){
+        var bb = document.getElementById("text").value;
+
+        if(bb==aa){
+            alert("정상적으로 인증 되었습니다");
+        }
+        else{
+            alert("인증번호가 다릅니다" );
+        }
+   };     
+
+ </script>
+</head>
+<body>
+
+ <input type="text" readonly id="a">
+ <input type="text" id="text">
+ <input type="button" value="인증" onclick="abc();">
+
+</body>
+<script>
+    //난수 출력
+    //인증번호 출력시 *9999 라고 쓰면 4자리도 나오지만 2자리 3자리 1자리도 뽑힐수있음
+    var a = Math.round(Math.random()*9); 
+    var b = Math.round(Math.random()*9); 
+    var c = Math.round(Math.random()*9); 
+    var d = Math.round(Math.random()*9); 
+
+    var aa = document.getElementById("a").value = a + "" + b + "" + c + "" + d;
+    
+</script>
+</html>

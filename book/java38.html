@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-compatible" content="IE=Edge,chrome=1">
+ <title>자식창 데이터 받기</title>
+ <script>
+    function idcheck(){
+        var a = document.getElementById("mid").value;
+        
+        window.open("./java.html?mid="+a,"","width=500,height=500");
+    //form으로 보내는 get 방식도 있지만 이렇게 부모창에서 자식창으로 강제로 값을 넣어 던지는 방법이 있음
+    //?뒤의 name은 백앤더가 요청하는 이름으로 넣음
+    }
+
+ </script>
+</head>
+<body>
+<form name="idck" id="idck">
+ <input type="text" name="mid" id="mid">
+ <input type="button" value="중복체크" onclick="idcheck();">
+</form>
+</body>
+</html>

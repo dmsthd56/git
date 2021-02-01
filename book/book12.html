@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+ <title>HTML 3-26(10/27)</title>
+ <style>
+  body{margin:0; padding:0;}
+
+  .ulcss{width:100%; height:auto; list-style:none; margin:0; padding:0;}
+  .ulcss>li{width:100px; height:30px; float: left;
+   text-align:center; line-height:30px;}
+ 
+   .ulcss>li:nth-child(1){background-color:gray; border-radius:10px 0 0 10px;}
+   /*.ulcss>li:first-child */
+
+   .ulcss>li:nth-child(2n+2){background-color:green;}/* 실무에는 굳이 + 안씀 (2n)으로 씀 */
+   .ulcss>li:nth-child(3n){background-color:red;}
+   .ulcss>li:nth-child(5n+5){background-color:blue;}
+   
+   .ulcss>li:nth-child(10){border-radius:0 10px 10px 0;}
+   /*.ulcss>li:last-child */
+ </style>
+</head>
+<body>
+ <ul class="ulcss">
+    <li>menu1</li>
+    <li>menu2</li>
+    <li>menu3</li>
+    <li>menu4</li>
+    <li>menu5</li>
+    <li>menu6</li>
+    <li>menu7</li>
+    <li>menu8</li>
+    <li>menu9</li>
+    <li>menu10</li>
+ </ul>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+ <title>HTML ch-8(10/27)</title>
+ <style>
+   body{margin:0; padding:0;}
+
+   .olcss{list-style:none; margin:0; padding:0;}
+   .olcss>li{width:140px; height:46px;
+   background-image:url("http://reduck.dothome.co.kr/image/menu.png");
+   cursor: pointer; border-radius:10px 10px 0 0;}
+
+   /* 내가 짠 코드 
+   .olcss>li:nth-child(2){background-position-y:-50px;}
+   .olcss>li:nth-child(3){background-position-y:-100px;}
+   .olcss>li:nth-child(4){background-position-y:-150px;}
+   .olcss>li:nth-child(5){background-position-y:-200px;}
+   .olcss>li:nth-child(6){background-position-y:-250px;}
+   .olcss>li:nth-child(7){background-position-y:-300px;}
+
+   .olcss>li:nth-child(1):hover {background-position-y:-350px;}
+   .olcss>li:nth-child(2):hover {background-position-y:-400px;}
+   .olcss>li:nth-child(3):hover {background-position-y:-450px;}
+   .olcss>li:nth-child(4):hover {background-position-y:-500px;}
+   .olcss>li:nth-child(5):hover {background-position-y:-550px;}
+   .olcss>li:nth-child(6):hover {background-position-y:-600px;}
+   .olcss>li:nth-child(7):hover {background-position-y:-650px;}*/
+
+
+   /* 선생님 코드 calc 사용 */
+   .olcss>li:nth-child(2){background-position:0 calc(-50 * 1px);}
+   .olcss>li:nth-child(3){background-position:0 calc(-50 * 2px);}
+   .olcss>li:nth-child(4){background-position:0 calc(-50 * 3px);}
+   .olcss>li:nth-child(5){background-position:0 calc(-50 * 4px);}
+   .olcss>li:nth-child(6){background-position:0 calc(-50 * 5px);}
+   .olcss>li:nth-child(7){background-position:0 calc(-50 * 6px);}
+
+   .olcss>li:nth-child(1):hover {background-position:0 calc(-50 * 7px);}
+   .olcss>li:nth-child(2):hover {background-position:0 calc(-50 * 8px);}
+   .olcss>li:nth-child(3):hover {background-position:0 calc(-50 * 9px);}
+   .olcss>li:nth-child(4):hover {background-position:0 calc(-50 * 10px);}
+   .olcss>li:nth-child(5):hover {background-position:0 calc(-50 * 11px);}
+   .olcss>li:nth-child(6):hover {background-position:0 calc(-50 * 12px);}
+   .olcss>li:nth-child(7):hover {background-position:0 calc(-50 * 13px);}
+
+
+
+
+
+ </style>
+</head>
+<body>
+ <ol class="olcss">
+   <li></li>  
+   <li></li> 
+   <li></li> 
+   <li></li> 
+   <li></li> 
+   <li></li> 
+   <li></li> 
+ </ol>
+
+</body>
+</html>

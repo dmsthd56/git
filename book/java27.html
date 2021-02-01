@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-compatible" content="IE=Edge,chrome=1">
+ <title>javascript 131~157p 함수 (10/29)</title>
+ <script>
+     function aaa(){
+     var a = document.getElementById("tx1").value; //사용자가 입력한 값을 가져옴
+     var b = Number(a); //사용자 입력 값을 숫자로 변형 
+     var c; //for문 초기값
+     var d; //계산값
+     
+     if(isNaN(b)==false){ //b가 숫자인지 문자인지 확인
+    
+        for(c=1;c<10;c++){ // 쌍for문 돌릴 필요 없음 뒷 숫자 확인
+            d = b*c;
+            document.write(b + "*" + c + "=" + d +"<br>");
+        };
+      
+     }
+     else{
+         alert("숫자만 입력하시오");
+     }
+
+    };
+
+ </script>
+</head>
+<body>
+ <input type="text" id="tx1">
+ <input type="button" value="확인" onclick="aaa();">
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-compatible" content="IE=Edge,chrome=1">
+ <title>javascript 131~157p 함수 (10/29)</title>
+ <script>
+     function aaa(){
+        var a = Number(f.pernm.value);
+        //alert(a);
+
+        if(isNaN(a)==false){//숫자일때
+            alert("숫자와 문자를 함께 입력하세요");
+        }
+        else{//문자인걸 확인 후 백앤드로 넘기기 
+            f.method = "POST"; //form에 있는 name값으로 넘김
+            f.action ="http://reduck.dothome.co.kr/book/java28.php";
+            f.submit();//onclick을 쓰고 값을 백앤드로 넘길때 필요함!!
+        }
+     }
+
+ </script>
+</head>
+<body>
+<form id="f1" name="f">
+<!--submit일 경우 form에 method,action onsubmit=retrun 함수명 을 써서 넘김-->
+ <input type="text" name="pernm" >
+ <input type="button" value="전송" onclick="aaa();">
+<!--button을 쓰면 form에 method와 action 쓰지 말라는 뜻-->
+</form>
+</body>
+</html>

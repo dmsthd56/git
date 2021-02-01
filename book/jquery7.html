@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+ <title>jquery7-노드카운팅(11/2)</title>
+ <script src="../jquery/jquery.js"></script><!--jquery 엔진 셋팅-->
+ <script>
+//11/2 다시 풀어보기!
+
+  $(document).ready(function(){
+      //임시변수는 밖에다가 생성
+      var $disc = 0;
+
+      //노드 갯수를 알아야 함
+      var $node = $("#ulcss>li").length;
+
+     $("#rigth").click(function(){
+         //반복문 전체를 black
+        
+         var $check = 0;
+         while($check<$node){
+             
+        $("#ulcss>li").eq($check).css("background-color","black");
+            
+            $check++;
+         };
+        //임시변수 카운트 숫자 +1씩 증가
+         //해당 노드만 red 처리
+         
+         if($disc<$node-1){//임시변수가 4보다 작을때
+            $disc = $disc + 1;
+             
+         }
+         else{//4보다 클때
+            $disc=0;
+           
+           
+         }
+         $("#ulcss>li").eq($disc).css("background-color","red");
+     });//left
+
+     $("#left").click(function(){//첫번째 노드의 빨간색이 안사라짐
+         // 해당 노드 0 맨 끝에 노드로 이동 if 조건
+         if($disc==0){
+            $disc = 4;
+             //== $disc= $node-1;
+         }
+         else{
+            $disc = $disc-1; 
+         }
+          //console.log($disc) 노드 도는거 확인
+    
+         // 반복문 전체 black 으로 설정
+         var $c=0;
+         while($c<$node){
+            $("#ulcss>li").eq($c).css("background-color","black");  
+
+            $c++;
+         };
+         // 해당 노드만 red로 변경
+         $("#ulcss>li").eq($disc).css("background-color","red");
+
+
+     });//left
+
+  });//ready
+ </script>
+ <style>
+  body {margin:0; padding:0;}
+
+  .ulcss {list-style:none; margin:0; padding:0;}
+  .ulcss>li{width:40px; height:5px; background-color: black; display:inline-block;}
+  .ulcss>li:first-child{background-color:red;}
+
+ </style>
+</head>
+<body>
+ <ul class="ulcss" id="ulcss">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+ </ul>
+<input type="button" value="<<" id="left">
+<input type="button" value=">>" id="rigth">
+    
+</body>
+</html>

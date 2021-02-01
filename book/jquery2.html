@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+ <title>jquery2(11/2)</title>
+ <script src="../jquery/jquery.js"></script><!--jquery 엔진 셋팅-->
+ <script>
+     $(document).ready(function(){
+        $("#btn").click(function(){
+            var $a = $("#text").val();//괄호 꼭 넣어야함! 
+            alert($a);
+            
+
+
+
+        });
+     ;})//ready end
+ </script>
+</head>
+<body>
+ <input type="text" id="text">
+ <input type="button" value="메세지" id="btn">
+
+</body>
+</html>

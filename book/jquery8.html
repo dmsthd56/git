@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+ <title>jquery8(11/2)</title>
+ <script src="../jquery/jquery.js"></script><!--jquery 엔진 셋팅-->
+ <script>
+    //다시 풀기 11/2
+     $(document).ready(function(){
+        //li의 노드 갯수(전역변수)
+        var $ch = $("#ulcss>li").length;
+
+         $("#btn1").click(function(){//맨 앞 노드 추가 
+          var $node ="<li>노드0</li>"
+
+            $("#ulcss").prepend($node);
+         });
+
+         $("#btn2").click(function(){//맨 뒤 노드 추가 
+            var $node ="<li>노드0</li>"
+
+         $("#ulcss").append($node);
+         });
+
+
+         $("#btn3").click(function(){//맨 앞 노드 삭제 
+
+         $("#ulcss>li").eq(0).remove();
+         });
+
+         $("#btn4").click(function(){//맨 뒤 노드 삭제 
+
+           var $nodes = $("#ulcss>li").length -1; //노드 전체 갯수와 li의 갯수는 차이가 남
+
+           $("#ulcss>li").eq($nodes).remove();
+         });
+     });//ready
+ </script>
+
+</head>
+<body>
+ <ul id="ulcss">
+   <li>노드1</li>
+   <li>노드2</li>
+   <li>노드3</li>
+   <li>노드4</li>
+   <li>노드5</li>
+   <li>노드6</li>
+ </ul>
+ <button type="button" id="btn1">노드추가(맨앞)</button>
+ <button type="button" id="btn2">노드추가(맨뒤)</button>
+ <button type="button" id="btn3">노드삭제(맨앞)</button>
+ <button type="button" id="btn4">노드삭제(맨뒤)</button>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-compatible" content="IE=Edge,chrome=1">
+ <title>javascript 131~157p 함수 (10/29)</title>
+ <script>
+ //다시풀기10/29
+     function aaa(){
+         var aa = document.getElementsByClassName("a").length;
+         //alert(aa)
+         var aw = null;
+        if(document.getElementById("allck").checked==true){
+            aw = true;
+  
+        }
+        else{
+            aw =false;
+        }
+        for(var i=0;i<aa;i++){
+        var ids = "a"+i;
+        document.getElementById(ids).checked=aw;
+        }
+      
+
+     };
+
+ </script>
+</head>
+<body>
+ <input type="checkbox" onclick="aaa();" id="allck">전체선택
+ <input type="checkbox" id="c0" class="a">번호1
+ <input type="checkbox" id="c1" class="a">번호2
+ <input type="checkbox" id="c2" class="a">번호3
+ <input type="checkbox" id="c3" class="a">번호4
+ <input type="checkbox" id="c4" class="a">번호5
+
+</body>
+</html>

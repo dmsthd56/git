@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-compatible" content="IE=Edge, chrome=1">
+ <title>array 배열3</title>
+ <script>
+     var array = [
+         ["red","빨강"],
+         ["blue","파랑"],
+         ["green","녹색"],
+         ["yellow","노랑"],
+         ["pink","분홍"],
+         ["black","검정"]
+        ];
+     var check = array.length;
+     //alert(check)
+     var f;
+     var color="white";
+     var ok ="no" //임시 확인 변수 
+     for(f=0;f<check;f++){
+        //document.write(array[f][0]+"<br>");
+        if(color==array[f][0]){
+            alert("해당 색상이 있습니다.");
+            ok = "yes";
+        }
+     }
+     if(ok=="no"){
+         alert("해당 색상이 없습니다.");
+     }
+
+
+
+ </script>
+</head>
+<body>
+
+</body>

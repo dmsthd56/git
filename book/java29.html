@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-compatible" content="IE=Edge,chrome=1">
+ <title>javascript 131~157p 함수 (10/29)</title>
+ <script>
+     function aaa(){
+      //text의 값 모두 가져오기
+       var a = Number(f.tel1.value);
+       var b = Number(f.tel2.value);
+       var c = Number(f.tel3.value);
+       //alert(c)
+
+       if(isNaN(a)==true || isNaN(b)==true || isNaN(c)==true){
+           alert("숫자만 입력 바랍니다.")
+       }
+       else{
+           f.method = "GET";
+           f.action = "http://reduck.dothome.co.kr/book/java29.php";
+           f.submit();
+           //alert("text")
+       }
+     };
+
+ </script>
+</head>
+<body>
+<form name="f">
+<!--<form name="f" method="GET" action="http://reduck.dothome.co.kr/book/java29.php" onsubmit="retrun aaa();">-->
+ <input type="text" name="tel1">
+ <input type="text" name="tel2">
+ <input type="text" name="tel3">
+ <!--<input type="submit" value="전화번호 전송">-->
+ <input type="button" value="전화번호 전송" onclick="aaa();">
+</form>
+
+</body>
+</html> 
